@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useMovieService } from "../../hooks";
 import type { MovieSummary } from "../../types/domain";
-import { MovieSummaryCard } from "../../components";
+import { DefaultLayout, MovieSummaryCard } from "../../components";
 
 const Home = () => {
   const [movies, setMovies] = useState([] as MovieSummary[]);
@@ -21,13 +21,13 @@ const Home = () => {
   }, [getAll]);
 
   return (
-    <div>
+    <DefaultLayout title="Pop Movies">
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0", width: "100vw", height: "100%" }}> 
         {movies.map((movie) => (
           <MovieSummaryCard key={movie.id} movie={movie} />
         ))}
       </div>
-    </div>
+    </DefaultLayout>
   );
 };
 
