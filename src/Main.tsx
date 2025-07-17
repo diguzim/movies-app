@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { BrowserRouter } from "react-router";
-import { Routes } from "./routes";
+import { Routes } from "./Routes";
+import { MovieServiceProvider } from "./providers";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <MovieServiceProvider>
       <Routes />
-    </BrowserRouter>
+    </MovieServiceProvider>
   </StrictMode>
 );
