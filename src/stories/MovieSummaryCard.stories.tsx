@@ -13,4 +13,8 @@ const exampleMovie: MovieSummary = {
   poster_path: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
 };
 
-export const Default = () => <MovieSummaryCard movie={exampleMovie} />;
+export const Default = () => (
+  <div style={{ width: "200px", margin: "auto" }}>
+    <MovieSummaryCard movie={exampleMovie} />
+  </div>
+);
