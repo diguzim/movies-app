@@ -1,12 +1,12 @@
 import { MovieServiceContext } from "../contexts";
-import TheMovieDBService from "../services/TheMovieDBService";
+import FakeMovieService from "../services/FakeMovieService";
 
 export const MovieServiceProvider = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  const service = new TheMovieDBService();
+  const service = new FakeMovieService();
 
   return (
     <MovieServiceContext.Provider value={service}>
