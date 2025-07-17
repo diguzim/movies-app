@@ -14,7 +14,7 @@ export function TopBar({ title, showBack = false }: TopBarProps) {
     <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px', padding: '0 16px', backgroundColor: '#212121', color: 'white' }}>
     {showBack && (
       <div style={{ width: '32px' }}>
-          <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', padding: 0, color: 'white' }}>
+          <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', padding: 0, color: 'white', cursor: 'pointer' }}>
             <FaArrowLeft size={14} />
           </button>
       </div>
