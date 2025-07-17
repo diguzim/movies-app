@@ -22,7 +22,7 @@ export const Home = () => {
 
   return (
     <DefaultLayout title="Pop Movies">
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "0", width: "100vw", height: "100%", backgroundColor: "black" }}> 
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(185px, 1fr))", gap: "0", width: "100vw", height: "100%", backgroundColor: "black" }}>
         {movies.map((movie) => (
           <MovieSummaryCard key={movie.id} movie={movie} />
         ))}

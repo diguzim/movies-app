@@ -24,10 +24,7 @@ class FakeMovieService implements IMovieService {
   }
 
   async getOne(id: string): Promise<MovieDetails | null> {
-    if (id === MOVIE_DETAILS.id) {
-      return MOVIE_DETAILS;
-    }
-    return null;
+    return MOVIE_DETAILS;
   }
 }
 
