@@ -1,3 +1,4 @@
+import { MemoryRouter } from "react-router";
 import { MovieSummaryCard } from "../components/MovieSummaryCard";
 import type { MovieSummary } from "../types/domain";
 
@@ -14,7 +15,9 @@ const exampleMovie: MovieSummary = {
 };
 
 export const Default = () => (
-  <div style={{ width: "200px", margin: "auto" }}>
-    <MovieSummaryCard movie={exampleMovie} />
-  </div>
+  <MemoryRouter>
+    <div style={{ width: "200px", margin: "auto" }}>
+      <MovieSummaryCard movie={exampleMovie} />
+    </div>
+  </MemoryRouter>
 );
